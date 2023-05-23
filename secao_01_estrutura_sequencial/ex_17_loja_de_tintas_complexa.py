@@ -26,7 +26,30 @@ Acrescente 10% de folga e sempre arredonde os valores para cima, isto é, consid
     Para menor custo, você pode comprar 2 lata(s) de 18 litros e 1 galão(ões) de 3.6 litros a um custo de R$ 185. Vão sobrar 2.6 litro(s) de tinta.
 
 """
-
+import math
 
 def calcular_latas_e_preco_de_tinta():
     """Escreva aqui em baixo a sua solução"""
+#1 O programa deverá pedir o tamanho em metros quadrados da área a ser pintada.
+
+    area_pintada = float(input(f'Qual o tamanho da área em metros quadrados que vai ser pintada? '))
+
+#2 Rendimento da tinta 1 litro 6 metros. Quantos litros de tinta vou usar. Acrescente 10% de folga e sempre arredonde os valores para cima
+
+    quantidade_de_tinta = math.ceil((area_pintada / 6) * 1.1)
+
+#3 Latas de 18 litros, que custam R$ 80,00; #2 comprar apenas latas de 18 litros;
+
+    quantas_latas_de_18 = (quantidade_de_tinta // 18) + 1
+    valor_das_latas_de_18 = quantas_latas_de_18 * 80
+    quanta_tinta_sobra_18 = (18 * quantas_latas_de_18) - quantidade_de_tinta
+
+#4 galões de 3,6 litros, que custam R$ 25,00; #3 comprar apenas galões de 3,6 litros;
+
+    quantas_latas_de_3_6 = (quantidade_de_tinta // 3.6) + 1 
+    valor_das_latas_de_3_6 = quantas_latas_de_3_6 * 25
+    quanta_tinta_sobra_3_6 = ((3.6 * quantas_latas_de_3_6) - quantidade_de_tinta)
+
+#4 misturar latas e galões, de forma que o custo seja menor.
+
+    
