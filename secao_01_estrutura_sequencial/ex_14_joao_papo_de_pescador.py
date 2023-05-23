@@ -26,3 +26,9 @@ Mostrar o peso e multa com duas casas decimais
 
 def calcular_peso_excedente_e_multa():
     """Escreva aqui em baixo a sua solução"""
+    peso_do_peixe = float(input(f'Qual o peso do peixe? '))
+    peso_excedente = peso_do_peixe - 50
+    multa = peso_excedente * 4.0
+
+    print(f'O peso excedente de peixes é de {peso_excedente:.2f} kg')
+    print(f'Por isso, a multa é de R$ {multa:.2f}')
