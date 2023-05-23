@@ -23,7 +23,7 @@ def calcular_latas_e_preco_de_tinta():
     """Escreva aqui em baixo a sua solução"""
     area_pintada = float(input(f'Qual a área em metros quadrados será pintada? '))
     litros_usados = area_pintada / 3
-    numero_de_latas = (litros_usados // 18) + 1
+    numero_de_latas = int((litros_usados // 18) + 1)
     valor_pago = numero_de_latas * 80
 
     print(f'Você deve comprar {numero_de_latas} lata(s) tinta ao custo de R$ {valor_pago:.2f}')
