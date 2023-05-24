@@ -25,6 +25,6 @@ def vogal_ou_consoante(letra):
         return 'vogal'
     elif letra.lower() == 'o':
         return 'vogal'
-    elif letra.lower() == 'u':    
+    elif letra.lower() == 'u':
         return 'vogal'
     return 'consoante'
