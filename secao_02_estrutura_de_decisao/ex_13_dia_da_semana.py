@@ -29,3 +29,20 @@ se digitar outro valor deve aparecer valor inválido.
 
 def calcular_dia_da_semana(numero: int):
     """Escreva aqui em baixo a sua solução"""
+    if numero == 1:
+        return 'Domingo'
+    if numero == 2:
+        return 'Segunda'
+    if numero == 3:
+        return 'Terça'
+    if numero == 4:
+        return 'Quarta'
+    if numero == 5:
+        return 'Quinta'
+    if numero == 6:
+        return 'Sexta'
+    if numero == 7:
+        return 'Sábado'
+    else:
+        return 'Dia Inválido' 
+    
