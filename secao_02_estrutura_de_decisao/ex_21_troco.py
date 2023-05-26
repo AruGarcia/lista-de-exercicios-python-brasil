@@ -27,3 +27,67 @@ uma nota de 5 e quatro notas de 1.
 
 def calcular_troco(valor: int) -> str:
     """Escreva aqui em baixo a sua solução"""
+    
+    num_notas_100 = valor // 100
+    num_notas_50 = int(((valor % 100) // 10) / 5)
+    num_notas_10 = int((valor % 100) // 10 - (num_notas_50 * 5))
+    num_notas_5 = int((valor % 10) / 5)
+    num_notas_1 = int((valor % 10) - (num_notas_5 * 5))
+
+    if 100 <= valor <= 600:
+        if num_notas_50 == 0 and num_notas_10 == 0 and num_notas_5 == 0 and num_notas_1 == 0:
+            print(f"'{num_notas_100} nota de R$ 100'")
+
+        elif num_notas_50 > 0 and num_notas_10 == 0 and num_notas_5 == 0 and num_notas_1 == 0:
+            print(f"'{num_notas_100} notas de R$ 100 e {num_notas_50} nota de R$ 50'")
+        
+        elif num_notas_50 > 0 and num_notas_10 > 0 and num_notas_5 == 0 and num_notas_1 == 0:
+            print(f"'{num_notas_100} notas de R$ 100, {num_notas_50} nota de R$ 50 e {num_notas_10} notas de R$ 10'")
+
+        elif num_notas_50 > 0 and num_notas_10 == 0 and num_notas_5 > 0 and num_notas_1 == 0:
+            print(f"'{num_notas_100} notas de R$ 100, {num_notas_50} nota de R$ 50, e {num_notas_5} notas de R$ 5'")
+
+        elif num_notas_50 > 0 and num_notas_10 == 0 and num_notas_5 > 0 and num_notas_1 > 0:
+            print(f"'{num_notas_100} notas de R$ 100, {num_notas_50} nota de R$ 50, {num_notas_5} nota de R$ 5 e {num_notas_1} nota de R$ 1'")
+
+        elif num_notas_50 > 0 and num_notas_10 > 0 and num_notas_5 > 0 and num_notas_1 == 0:
+            print(f"'{num_notas_100} notas de R$ 100, {num_notas_50} nota de R$ 50, {num_notas_10} notas de R$ 10 e {num_notas_5} notas de R$ 5'")
+        
+        else: # num_notas_50 > 0 and num_notas_10 > 0 and num_notas_5 > 0 and num_notas_1 > 0:
+            print(f"'{num_notas_100} notas de R$ 100, {num_notas_50} nota de R$ 50, {num_notas_10} notas de R$ 10, {num_notas_5} notas de R$ 5 e {num_notas_1} notas de R$ 1'")
+        
+    elif 99 <= valor <= 1:
+
+        if num_notas_50 > 0 and num_notas_10 == 0 and num_notas_5 == 0 and num_notas_1 == 0:
+                print(f"'{num_notas_50} nota de R$ 50'")
+
+        elif num_notas_50 > 0 and num_notas_10 > 0 and num_notas_5 == 0 and num_notas_1 == 0:
+                print(f"'{num_notas_50} nota de R$ 50, {num_notas_10} e notas de R$ 10'")
+            
+        elif num_notas_50 > 0 and num_notas_10 > 0 and num_notas_5 > 0 and num_notas_1 == 0:
+                print(f"'{num_notas_50} nota de R$ 50, {num_notas_10} notas de R$ 10 e {num_notas_5} notas de R$ 5'")
+        
+        elif num_notas_50 > 0 and num_notas_10 > 0 and num_notas_5 > 0 and num_notas_1 > 0:
+                print(f"'{num_notas_50} nota de R$ 50, {num_notas_10} notas de R$ 10, {num_notas_5} notas de R$ 5 e {num_notas_1} notas de R$ 1'")
+
+            
+            
+        elif num_notas_50 == 0 and num_notas_10 > 0 and num_notas_5 == 0 and num_notas_1 == 0:
+            print(f"'{num_notas_10} e notas de R$ 10'")
+
+        elif num_notas_50 == 0 and num_notas_10 > 0 and num_notas_5 > 0 and num_notas_1 == 0:
+            print(f"'{num_notas_10} notas de R$ 10 e {num_notas_5} notas de R$ 5'")
+            
+        elif num_notas_50 == 0 and num_notas_10 > 0 and num_notas_5 > 0 and num_notas_1 > 0:
+            print(f"'{num_notas_10} notas de R$ 10, {num_notas_5} notas de R$ 5 e {num_notas_1} notas de R$ 1'")
+
+
+
+        elif num_notas_50 == 0 and num_notas_10 == 0 and num_notas_5 > 0 and num_notas_1 == 0:
+            print(f"'{num_notas_5} notas de R$ 5'")
+            
+        else: #num_notas_50 == 0 and num_notas_10 == 0 and num_notas_5 > 0 and num_notas_1 > 0:
+            print(f"'{num_notas_5} notas de R$ 5 e {num_notas_1} notas de R$ 1'")
+            
+    else:
+        print(f"'{num_notas_1} nota de R$ 1'")
