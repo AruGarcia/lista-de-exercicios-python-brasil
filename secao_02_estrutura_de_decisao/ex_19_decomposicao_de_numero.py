@@ -52,11 +52,16 @@ Observando os termos no plural a colocação do "e", da vírgula entre outros. E
 
 def decompor_numero(numero: int):
     """Escreva aqui em baixo a sua solução"""
+
+    """Criar centena, dezena e inidade separadas."""
+
     centena = numero // 100
     dezena = (numero - (centena * 100)) // 10
     unidade = numero - (centena * 100) - (dezena * 10)
 
-    if numero < 0:
+    """Respostas"""
+
+    if numero <= 0:
         return 'O número precisa ser positivo'
     
     elif centena == 0 and dezena == 0 and unidade ==1:
