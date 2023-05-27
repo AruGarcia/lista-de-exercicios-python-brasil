@@ -72,7 +72,7 @@ def fazer_operacao_e_classificar(n_1: float, n_2: float, operacao: str):
             posi_neg = 'positivo'
 
         int_dec = 'inteiro'
-      
+
     elif resultado != resultado_round:
 
         par_ou_impar = ''
