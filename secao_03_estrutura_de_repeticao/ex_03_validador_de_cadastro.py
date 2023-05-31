@@ -40,3 +40,36 @@ Faça um programa que leia e valide as seguintes informações:
 
 def cadastrar_usuario(nome: str, idade: int, salario: float, sexo: str, estado_civil: str):
     """Escreva aqui em baixo a sua solução"""
+    erro = 0
+    while True:
+          
+        if len(nome) < 3:
+            print(f'Erro: o nome precisa ter 3 letras ou mais, não pode ser {nome}')
+            erro += 1
+        else:
+            pass
+        if not 0 < idade <= 150:
+            print(f'Erro: a idade precisa estar entre 0 e 150, não pode ser {idade}')
+            erro += 1
+        else:
+            pass
+        if not salario > 0:
+            print('Erro: o salário precisa ser positivo, não pode ser 0')
+            erro += 1
+            
+        if sexo.lower() != 'm' and sexo.lower() != 'f':
+            print(f'Erro: o sexo precisa ser "m" ou "f", não pode ser "{sexo}"')
+            erro += 1
+        else:
+            pass
+        if estado_civil.lower() != 's' and estado_civil.lower() != 'c' and estado_civil.lower() != 'v' and estado_civil.lower() != 'd':
+            print(f'Erro: o estado civil precisa ser "s", "c", "v" ou "d", não pode ser "{estado_civil}"')
+            erro += 1
+        else:
+            pass
+        
+        if erro > 0:
+            break
+        else:
+            print('Cadastro realizado com sucesso')
+            break
