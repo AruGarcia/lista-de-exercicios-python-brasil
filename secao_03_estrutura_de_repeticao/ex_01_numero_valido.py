@@ -36,12 +36,29 @@ def obter_numero_valido():
     """Escreva aqui em baixo a sua solução"""
     while True:
         try:
-            num = int(input('Digite um número de 1 até 10: '))
+            num_str = input('Digite um número de 1 até 10: ')
+            num = int(num_str)
         except ValueError:
-            print('Deve ser um número inteiro')
+            print(f'Número inválido: {num_str}')
+            
         else:
             if 0 <= num <= 10:
-                print(num)
-                break
+                return num
             else:
+                print(f'Número inválido: {num}')
+
+
+
+
+
+
+
+
+    while True:
+        num = int(input('Digite um número de 1 até 10: '))
+
+        if 0 <= num <= 10:
+            print(num)
+            break
+        else:
                 print(f'Número inválido: {num}')
