@@ -59,3 +59,58 @@ Mostre o restultado com duas casas decimais
 
 def calcular_preco_da_compra(kilos_de_morango: int, kilos_de_maca: int):
     """Escreva aqui em baixo a sua solução"""
+
+    if 1 <= kilos_de_morango <= 5 and kilos_de_maca == 0: 
+        conta_morango = kilos_de_morango * 2.5
+        valor_do_desconto_morango = 0
+        valor_total = conta_morango - valor_do_desconto_morango
+        print(f'(+)  Morango  - valor:  R$ {conta_morango:5.2f} - quantidade:  {kilos_de_morango} kg - preço: R$ 2.50/kg\n(-)  Desconto - valor:  R$  {valor_do_desconto_morango:4.2f}')
+        print(f'          Valor Total:  R$ {valor_total:5.2f}')
+
+    elif kilos_de_morango > 5 and kilos_de_maca == 0:
+        conta_morango = kilos_de_morango * 2.5
+        valor_do_desconto_morango = conta_morango - (kilos_de_morango * 2.2)
+        valor_total = conta_morango - valor_do_desconto_morango
+        print(f'(+)  Morango  - valor:  R$ {conta_morango:4.2f} - quantidade:  {kilos_de_morango} kg - preço: R$ 2.20/kg\n(-)  Desconto - valor:  R$  {valor_do_desconto_morango:4.2f}')
+        print(f'          Valor Total:  R$ {valor_total:4.2f}')
+        
+    elif kilos_de_morango == 0 and 1 <= kilos_de_maca <=5:
+        conta_maca = kilos_de_maca * 1.8
+        valor_do_desconto_maca = 0
+        valor_total = conta_maca - valor_do_desconto_maca
+        print(f'(+)  Maça     - valor:  R$ {conta_maca:4.2f} - quantidade:  {kilos_de_maca} kg - preço: R$ 1.80/kg\n(-)  Desconto - valor:  R$ {valor_do_desconto_maca:4.2f}')
+        print(f'          Valor Total:  R$ {valor_total:4.2f}')
+        
+    elif kilos_de_morango == 0 and kilos_de_maca > 5:
+        conta_maca = kilos_de_maca * 1.5
+        valor_do_desconto_morango = ((kilos_de_morango * 2.5) - conta_morango)
+        valor_total = conta_maca - valor_do_desconto_maca
+        print(f'(+)  Maça     - valor:  R$ {conta_maca:4.2f} - quantidade:  {kilos_de_maca} kg - preço: R$ 1.50/kg\n(-)  Desconto - valor:  R$ {valor_do_desconto_maca:4.2f}')
+        print(f'          Valor Total:  R$ {valor_total:4.2f}')
+
+    elif 1 <= kilos_de_morango <= 5 and 1 <= kilos_de_maca <=5:
+        conta_morango = kilos_de_morango * 2.5
+        conta_maca = kilos_de_maca * 1.8
+        valor_do_desconto_morango_maca = 0
+        valor_total = conta_maca + valor_do_desconto_maca
+
+        print(f'(+)  Morango  - valor:  R$  {conta_morango:4.2f} - quantidade:  {kilos_de_morango} kg - preço: R$ 2.50/kg')
+        print(f'(+)  Maça     - valor:  R$ {conta_maca:4.2f} - quantidade:  {kilos_de_maca} kg - preço: R$ 1.80/kg')
+        print(f'(-)  Desconto - valor:  R$ {valor_do_desconto_morango_maca:4.2f}')
+        print(f'          Valor Total:  R$ {valor_total:4.2f}')
+
+    elif kilos_de_morango > 5 and  kilos_de_maca > 5:
+        conta_morango = kilos_de_morango * 2.2
+        conta_maca = kilos_de_maca * 1.5
+        valor_do_desconto_morango = ((kilos_de_morango * 2.5) - conta_morango)
+        valor_do_desconto_maca = ((kilos_de_maca * 2.5) - conta_morango)
+        valor_do_desconto_morango_maca = valor_do_desconto_morango + valor_do_desconto_maca
+        valor_total = conta_morango + conta_maca - valor_do_desconto_morango_maca
+
+        print(f'(+)  Morango  - valor:  R$ {conta_morango:4.2f} - quantidade:  {kilos_de_morango} kg - preço: R$ 2.50/kg')
+        print(f'(+)  Maça     - valor:  R$ {conta_maca:4.2f} - quantidade:  {kilos_de_maca} kg - preço: R$ 1.80/kg')
+        print(f'(-)  Desconto - valor:  R$ {valor_do_desconto_morango_maca:4.2f}')
+        print(f'          Valor Total:  R$ {valor_total:4.2f}')
+
+    else:
+        print('0')
