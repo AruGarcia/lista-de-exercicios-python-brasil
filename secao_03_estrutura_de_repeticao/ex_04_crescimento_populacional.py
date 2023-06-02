@@ -22,9 +22,9 @@ def calcular_ano_ultrapassagem_populacional() -> str:
 
     while int(pop_a) <= int(pop_b):
         ano += 1
-        pop_a += int(pop_a * 0.03)
-        pop_b += int(pop_b * 0.015)
-    return (f'População de A, depois de {ano} ano(s) será de {pop_a} pessoas, superando a de B, que será de {pop_b} pessoas')
+        pop_a += (pop_a * 0.03)
+        pop_b += (pop_b * 0.015)
+    return (f'População de A, depois de {ano} ano(s) será de {pop_a:.0f} pessoas, superando a de B, que será de {pop_b:.0f} pessoas')
 
 
 
