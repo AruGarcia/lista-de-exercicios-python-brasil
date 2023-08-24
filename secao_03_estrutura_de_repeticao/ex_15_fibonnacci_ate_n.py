@@ -25,3 +25,9 @@ n−ésimo termo.
 
 def calcular_serie_de_fibonacci(n: int) -> str:
     """Escreva aqui em baixo a sua solução"""
+    fibonacci_list = [1, 1]
+    num = 0
+    for i in range(2, n):
+        sum = (fibonacci_list[i-1]) + (fibonacci_list[i-2])
+        fibonacci_list.append(sum)
+    return fibonacci_list
